@@ -7,10 +7,10 @@ public class Spawner : MonoBehaviour
     public GameObject[] figures;
 
 
-    void Spawn()
+    public void Spawn()
     {
         int index = Random.Range(0, figures.Length - 1);
-
+        Debug.Log(transform.position);
         Instantiate(figures[index], transform.position, Quaternion.identity);
 
     }

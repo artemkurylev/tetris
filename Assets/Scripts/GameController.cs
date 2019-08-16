@@ -20,7 +20,7 @@ public class GameController : MonoBehaviour {
     {
         for(var f = 1.0; f>=0; f -= 0.1)
         {
-            Debug.Log("Created Figure!\n");
+            //Debug.Log("Created Figure!\n");
             yield return new WaitForSeconds(5);
         }
     }
