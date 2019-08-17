@@ -6,6 +6,7 @@ public class Figure : MonoBehaviour
 {
     // Time since last gravity tick
     private float lastFall = 0;
+
     public bool IsValidGridPos()
     {
         bool isValid = true;
@@ -106,8 +107,8 @@ public class Figure : MonoBehaviour
                 transform.position += new Vector3(0, 1, 0);
 
                 // Clear filled horizontal lines
-                Playfield.deleteFullRows();
-
+                int delta = Playfield.deleteFullRows();
+                GameController.gc.CalculateCount(delta);
                 // Spawn next Group
                 FindObjectOfType<Spawner>().Spawn();
 

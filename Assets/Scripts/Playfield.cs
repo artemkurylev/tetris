@@ -67,6 +67,7 @@ public class Playfield : MonoBehaviour
                 deleteRow(y);
                 decreaseRowsAbove(y);
                 --y;
+                points++;
             }
         }
         return points;
